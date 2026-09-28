@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #111827;
+  --color-pure-white: #FFFFFF;
+  --color-slate-surface: #F8FAFC;
+  --color-steel-border: #E2E8F0;
+  --color-safety-amber: #D97706;
+  --color-badge-teal: #0D9488;
+  --color-primary: #b91c1c;
+  --color-primary-container: #dc2626;
+  --color-cobalt-hover: #991b1b;
+  --color-primary-fixed: #fee2e2;
+  --color-primary-fixed-dim: #fecaca;
+  --color-secondary: #4b5563;
+  --color-secondary-container: #fee2e2;
+  --color-secondary-fixed: #fee2e2;
+  --color-surface: #fafafa;
+  --color-surface-dim: #f4f4f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fef2f2;
+  --color-surface-container: #fee2e2;
+  --color-surface-container-high: #fecaca;
+  --color-surface-container-highest: #fca5a5;
+  --color-on-surface: #111827;
+  --color-on-surface-variant: #4b5563;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #7f1d1d;
+  --color-inverse-surface: #1f2937;
+  --color-inverse-on-surface: #f9fafb;
+  --color-outline: #6b7280;
+  --color-outline-variant: #e5e7eb;
+  
+  --font-headline-lg: 'Barlow Condensed', sans-serif;
+  --font-headline-md: 'Barlow Condensed', sans-serif;
+  --font-headline-sm: 'Barlow Condensed', sans-serif;
+  --font-display-xl: 'Barlow Condensed', sans-serif;
+  --font-metric-counter: 'Barlow Condensed', sans-serif;
+  --font-technical-code: 'Open Sans', monospace;
+  --font-label-sm: 'Open Sans', sans-serif;
+  --font-label-md: 'Open Sans', sans-serif;
+  --font-body-sm: 'Open Sans', sans-serif;
+  --font-body-md: 'Open Sans', sans-serif;
+  --font-body-lg: 'Open Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #111827;
+    background-color: #fafafa;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+  }
+}
+
+@layer utilities {
+  .text-display-xl {
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .text-headline-lg {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+  }
+  .text-headline-md {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+  }
+  .text-headline-sm {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+  .text-metric-counter {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  .text-technical-code {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .text-label-sm {
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+  }
+  .text-label-md {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .text-body-sm {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .text-body-md {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .text-body-lg {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 640px) {
+    .text-display-xl {
+      font-size: 34px;
+      line-height: 38px;
+      letter-spacing: -0.01em;
+    }
+    .text-headline-lg {
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.01em;
+    }
+    .text-metric-counter {
+      font-size: 34px;
+      line-height: 36px;
+      letter-spacing: 0em;
+    }
+    .text-headline-md {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}
